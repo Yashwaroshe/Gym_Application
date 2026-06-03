@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "AI Fitness Tips";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Gym Management System</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">
+            <i class="fas fa-dumbbell"></i> AI-Powered Fitness Tips
+        </h2>
+
+        <!-- Input Form -->
+        <form asp-action="FitnessTips" method="post" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="goal" class="form-label">Enter Your Fitness Goal</label>
+                <input type="text" name="goal" id="goal" class="form-control" placeholder="e.g., Build muscle, lose weight, improve stamina" required />
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-robot"></i> Get AI Advice
+                </button>
+                <a href="/" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </form>
+
+        <!-- AI Response Section -->
+        @if (ViewBag.Advice != null)
+        {
+            <div class="alert alert-info mt-4">
+                <h5><i class="fas fa-lightbulb"></i> AI Advice:</h5>
+                <p>@ViewBag.Advice</p>
+            </div>
+        }
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

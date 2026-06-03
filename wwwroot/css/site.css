@@ -1,0 +1,91 @@
+/* Base Font */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Desktop font */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Mobile navbar fix */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Body spacing + background */
+body {
+    margin-bottom: 0px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: royalblue;
+   
+}
+
+/* Cards (Dashboard UI) */
+.card {
+    transition: 0.3s ease;
+    border-radius: 15px;
+    border: none;
+}
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+/* Buttons focus */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Form floating placeholder fix */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+    text-align: start;
+}
+.card {
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    }
+.trainer-card {
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+    .trainer-card:hover {
+        transform: scale(1.05);
+    }
+
+    .trainer-card img {
+        width: 120px;
+        height: 120px;
+    }
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/gym-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}

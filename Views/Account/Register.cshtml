@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.User
+
+<h2 class="text-center">User Registration</h2>
+
+<div class="container" style="max-width:400px;">
+    <form method="post">
+
+        <div class="mb-3">
+            <label>Name</label>
+            <input asp-for="Name" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input asp-for="Email" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label>Password</label>
+            <input asp-for="Password" type="password" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+    </form>
+</div>

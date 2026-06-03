@@ -1,0 +1,14 @@
+﻿@model IEnumerable<WebApplication1.Models.Payment>
+
+<h2>Payments</h2>
+
+<table class="table table-dark">
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.MemberName</td>
+            <td>@p.Amount</td>
+            <td>@p.Date</td>
+        </tr>
+    }
+</table>

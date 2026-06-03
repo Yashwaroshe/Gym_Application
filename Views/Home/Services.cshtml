@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Services";
+}
+
+<div class="container py-5">
+
+    <h1 class="text-center mb-5">Our Services</h1>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card service-card p-4 text-center">
+                <h4>Personal Training</h4>
+                <p>1-on-1 coaching with expert trainers.</p>
+                <button class="btn btn-warning">Join Now</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card service-card p-4 text-center">
+                <h4>Diet Plans</h4>
+                <p>Custom diet plans for your goals.</p>
+                <button class="btn btn-warning">Get Plan</button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card service-card p-4 text-center">
+                <h4>Workout Programs</h4>
+                <p>Structured workouts for fast results.</p>
+                <button class="btn btn-warning">Start</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    .service-card {
+        transition: 0.3s;
+        border-radius: 15px;
+    }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+        }
+</style>
